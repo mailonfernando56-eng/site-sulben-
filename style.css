@@ -1,1 +1,219 @@
+/* Reset e estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #0052a9 0%, #003a75 100%);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Seção Hero */
+.hero {
+    background: url('caminho/para/sua/imagem-carro.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.coverage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.coverage p {
+    background-color: rgba(0, 82, 169, 0.8);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Seção de Reflexão */
+.reflection {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.reflection h2 {
+    color: #0052a9;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.reflection p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 15px;
+}
+
+/* Seção de Benefícios */
+.benefits {
+    background-color: #f2f7fd;
+    padding: 60px 0;
+}
+
+.benefits h2 {
+    text-align: center;
+    color: #0052a9;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.benefit-item {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-item h3 {
+    color: #0052a9;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* Seção de Contato */
+.contact {
+    background: linear-gradient(135deg, #0052a9 0%, #003a75 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.phones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.phone-link {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.phone-link:hover {
+    background-color: #128C7E;
+    transform: scale(1.05);
+}
+
+.whatsapp-note {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #003a75;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .coverage {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .phones {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .phone-link {
+        width: 100%;
+        max-width: 300px;
+    }
+}
