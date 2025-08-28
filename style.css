@@ -20,6 +20,7 @@ body {
     line-height: 1.6;
 }
 
+/* Container */
 .container {
     width: 100%;
     max-width: 1200px;
@@ -27,7 +28,7 @@ body {
     padding: 0 20px;
 }
 
-/* Header Styles */
+/* Header */
 header {
     background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
     color: white;
@@ -42,6 +43,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .logo {
@@ -60,7 +63,6 @@ header {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 28px;
-    margin-bottom: 5px;
 }
 
 .logo-text p {
@@ -70,11 +72,6 @@ header {
 
 .header-contact {
     text-align: right;
-}
-
-.header-contact p {
-    margin-bottom: 5px;
-    font-size: 0.9rem;
 }
 
 .header-phones {
@@ -95,18 +92,14 @@ header {
     color: var(--secondary);
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')
+        no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 100px 0;
-    position: relative;
-}
-
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
+    padding: 100px 20px;
 }
 
 .hero h2 {
@@ -125,23 +118,18 @@ header {
 .price-tag {
     background: var(--secondary);
     color: white;
-    display: inline-block;
     padding: 15px 30px;
     border-radius: 50px;
     font-weight: 700;
     font-size: 1.8rem;
     margin: 20px 0;
+    display: inline-block;
     box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
-}
-
-.hero-buttons {
-    margin-top: 30px;
 }
 
 .cta-button {
     background: var(--secondary);
     color: white;
-    text-decoration: none;
     padding: 15px 40px;
     border-radius: 50px;
     font-weight: 700;
@@ -149,6 +137,7 @@ header {
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
 }
@@ -159,14 +148,9 @@ header {
     box-shadow: 0 8px 20px rgba(255, 107, 0, 0.4);
 }
 
-.disclaimer {
-    font-size: 0.9rem;
-    opacity: 0.9;
-}
-
-/* Coverage Section */
+/* Coverage */
 .coverage {
-    padding: 80px 0;
+    padding: 80px 20px;
     background: var(--light);
 }
 
@@ -177,7 +161,6 @@ header {
     font-size: 2.5rem;
     color: var(--dark);
     margin-bottom: 50px;
-    position: relative;
 }
 
 .section-title:after {
@@ -192,18 +175,19 @@ header {
 
 .coverage-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    margin-top: 40px;
 }
 
-.coverage-item {
+/* Cards */
+.coverage-item,
+.benefit-card {
     background: white;
     border-radius: 15px;
     padding: 30px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .coverage-item:hover {
@@ -224,16 +208,9 @@ header {
     color: white;
 }
 
-.coverage-item h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: var(--dark);
-}
-
-/* Benefits Section */
+/* Benefits */
 .benefits {
-    padding: 80px 0;
+    padding: 80px 20px;
     background: white;
 }
 
@@ -245,12 +222,9 @@ header {
 
 .benefit-card {
     background: linear-gradient(135deg, #f8f9fc 0%, #e4e8f0 100%);
-    border-radius: 12px;
-    padding: 25px;
     display: flex;
     align-items: center;
     gap: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .benefit-icon {
@@ -270,57 +244,15 @@ header {
 .cta {
     background: linear-gradient(135deg, var(--primary) 0%, #0040a0 100%);
     color: white;
-    padding: 80px 0;
+    padding: 80px 20px;
     text-align: center;
-}
-
-.cta h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.cta p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto 40px;
-}
-
-.phones {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.phone-link {
-    background: var(--secondary);
-    color: white;
-    text-decoration: none;
-    padding: 18px 35px;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 1.3rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
-}
-
-.phone-link:hover {
-    background: #ff5a00;
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(255, 107, 0, 0.4);
 }
 
 /* Footer */
 footer {
     background: var(--dark);
     color: white;
-    padding: 40px 0 20px;
+    padding: 40px 20px 20px;
     text-align: center;
 }
 
@@ -331,94 +263,17 @@ footer {
     gap: 20px;
 }
 
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 2rem;
-}
-
-.footer-logo-img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-}
-
-.footer-info {
-    opacity: 0.8;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.footer-phones {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.footer-phones a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.footer-phones a:hover {
-    color: var(--secondary);
-}
-
-.copyright {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    width: 100%;
-    opacity: 0.7;
-}
-
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
-        gap: 20px;
         text-align: center;
     }
-    
-    .header-contact {
-        text-align: center;
-    }
-    
     .hero h2 {
         font-size: 2.5rem;
     }
-    
     .hero p {
         font-size: 1.2rem;
-    }
-    
-    .price-tag {
-        font-size: 1.4rem;
-        padding: 12px 25px;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .phone-link {
-        padding: 15px 25px;
-        font-size: 1.1rem;
-    }
-    
-    .benefit-card {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .footer-phones {
-        flex-direction: column;
-        gap: 10px;
     }
 }
 
@@ -427,28 +282,13 @@ footer {
         flex-direction: column;
         text-align: center;
     }
-    
-    .logo-text h1 {
-        font-size: 24px;
-    }
-    
     .hero {
-        padding: 60px 0;
+        padding: 60px 20px;
     }
-    
     .hero h2 {
         font-size: 2rem;
     }
-    
-    .phones {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .coverage-grid {
-        grid-template-columns: 1fr;
-    }
-    
+    .coverage-grid,
     .benefits-grid {
         grid-template-columns: 1fr;
     }
